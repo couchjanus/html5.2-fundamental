@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+body {
+    font-size: 71.42857%;
+}
+    
+/* Main */
+#main {
+    width: 100%;
+}
+
+header p {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.7em;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 2.5;
+
+    text-transform: uppercase;
+}
+
+body {
+    color: #646464;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+/* Footer */
+
+#footer .icons {
+    color: #aaaaaa;
+}
+
+#footer .copyright {
+    color: #aaaaaa;
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.5em;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+}
+
+#footer {
+    text-align: center;
+}
+
+
+ol, ul {
+    list-style: none;
+}

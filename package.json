@@ -1,0 +1,47 @@
+{
+  "name": "html5.2-fundamental",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prebuild": "rimraf public && npm install",
+    "build": "webpack --mode production --colors --progress",
+    "prestart": "rimraf public && npm install",
+    "dev": "webpack-dev-server --mode development --hot --colors --progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/couchjanus/html5.2-fundamental.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/couchjanus/html5.2-fundamental/issues"
+  },
+  "homepage": "https://github.com/couchjanus/html5.2-fundamental#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^4.3.1",
+    "lodash": "^4.17.10",
+    "mini-css-extract-plugin": "^0.4.1",
+    "node-sass": "^4.9.0",
+    "raw-loader": "^0.5.1",
+    "resolve-url-loader": "^2.3.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "uglifyjs-webpack-plugin": "^1.2.7",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  }
+}

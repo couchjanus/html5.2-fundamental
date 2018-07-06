@@ -1,0 +1,251 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,
+abbr,acronym,address,big,cite,code,del,dfn,em,font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,
+var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td {
+
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box !important;
+}
+
+
+body {
+  color: $primary_color;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 71.42857%;
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+h1 {
+  display: block;
+  padding: 30px;
+  background-color: $primary-bg-color;
+  color: white;
+  text-align: center;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+  
+.wrapper p {
+  font: 10px/8px;             // Явный CSS, деление отсутствует
+  $width: 1000px;
+  width: $width/2;            // Используется переменная, операция деления
+  width: round(1.5)/2;        // Используется функция, операция деления
+  height: (500px/2);          // Обособление скобками, операция деления
+  margin-left: 5px + 8px/2px; // Используется +, операция деления
+}
+
+.pp {
+  $font-size: 12px;
+  $line-height: 30px;
+  font: #{$font-size}/#{$line-height};
+}
+
+
+h4{
+  background-color: green;
+  padding: 50px 20px 20px 50px;
+  }
+
+h3{
+  background-color: blue;
+  padding: 400px 50px 50px 400px;
+  }       
+
+header, nav, section, aside, footer {
+    padding: 5px;
+
+}
+
+.fun-border {
+  border: 2px solid red;
+  /* граница изгибается в виде 'D' */ 
+  // border-radius: 10px 40px 40px 10px;
+
+}
+   
+.border {
+    display: block;
+    border: 1px;
+    border: 2px dotted;
+    border: medium dashed green;
+    // border-radius: 2em;
+}
+
+a {
+  border-right:1px solid darken($primary-color, 10%);
+  
+}
+
+.center {
+  margin: auto;
+  background: lime;
+  width: 66%;
+}
+
+.outside {
+  margin: 3rem 0 0 -3rem;
+  background: cyan;
+  width: 66%;
+}       
+
+
+.wrapper{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cdiv {
+  margin: 2rem 0;
+  background: lavender;
+  }
+
+.cp {
+  margin: .4rem 0 1.2rem 0;
+  background: yellow;
+}
+
+
+footer a {
+    border: 1px solid;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 10px;
+    padding: 5px;
+}
+
+footer a:focus {
+    outline: 4px dotted #e73;
+    outline-offset: 4px;
+    background: #ffa;
+}
+   
+
+header p {
+  font-family: "Raleway", Helvetica, sans-serif;
+  font-size: 0.7em;
+  font-weight: 400;
+  letter-spacing: 0.25em;
+  line-height: 2.5;
+  text-transform: uppercase;
+}
+
+
+.icons, .copyright {
+    color:$light-grey;
+}
+
+
+
+section {
+  margin-top: 2em;
+}
+
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  max-width: 120rem;
+  width: 90%
+}
+
+
+ul.navbar-nav {
+  list-style: none;
+}
+  
+ul.navbar-nav li {
+  display: inline-block;
+}
+
+/* NAVIGATION */
+
+$link-vertical-padding:15px;      //Controls Menu top & bottom padding
+$link-horizontal-padding:20px;    //Contols Menu left & right padding
+
+nav {
+  width:100%;
+  background:darken(#262626,5%);
+  height: 60px;
+}
+
+nav ul {
+list-style:none;
+ li {
+    float:left;
+    position:relative;
+    z-index:1;
+    a {
+      display:block;
+      font-size: 1.5rem;
+      // margin: 0 1.5em;
+      padding: $link-vertical-padding $link-horizontal-padding;
+      text-align:center;
+      color:$link-color;
+      border-right:1px solid darken($primary-color, 10%);
+      
+      &:hover {
+        background:darken($primary-color, 10%);
+        color:$link-hover;
+      }
+    }
+  }
+}
+
+footer{
+	text-align: center;
+	a {
+		color: #fff;
+		&:hover {
+			color:$link-hover;
+ 	    }
+	}
+}
+
+
+/* Banner */
+.header {
+  background-color: #666666;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #d8d8d8;
+  padding: 14em 0;
+  text-align: center;
+  position: relative;
+}
+.banner {
+  background-image: url("/images/1.jpg");
+}
+.header h2 {
+  color: #ffffff;
+  font-size: 3.5em;
+  line-height: 1em;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+.header p {
+  font-size: 1.5em;
+  color: #ffffff;
+  margin-bottom: 2em;
+}
+.header p a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.banner {
+  background-image: url("/images/1.jpg");
+}

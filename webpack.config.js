@@ -77,7 +77,32 @@ const config = {
     }),
     new HtmlWebpackPlugin({
       template: './src/index.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/padding.html',
+      filename: './padding.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/margin.html',
+      filename: './margin.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/block.html',
+      filename: './block.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/nav.html',
+      filename: './nav.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/header.html',
+      filename: './header.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/landing.html',
+      filename: './landing.html'
     })
+
   ],
   optimization: isProduction ? {
     minimizer: [

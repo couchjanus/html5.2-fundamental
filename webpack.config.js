@@ -53,9 +53,25 @@ const config = {
       }, {
         loader: 'image-webpack-loader',
         options: {
+          bypassOnDebug: true, // webpack@1.x
+          disable: true, // webpack@2.x and newer
           mozjpeg: {
             progressive: true,
             quality: 70
+          },
+          optipng: {
+            enabled: false,
+          },
+          pngquant: {
+            quality: '65-90',
+            speed: 4
+          },
+          gifsicle: {
+            interlaced: false,
+          },
+          // the webp option will enable WEBP
+          webp: {
+            quality: 75
           }
         }
       },
@@ -79,28 +95,28 @@ const config = {
       template: './src/index.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/padding.html',
-      filename: './padding.html'
+      template: './src/blog.html',
+      filename: './blog.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/margin.html',
-      filename: './margin.html'
+      template: './src/contact.html',
+      filename: './contact.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/block.html',
-      filename: './block.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/nav.html',
-      filename: './nav.html'
-    }),
-    new HtmlWebpackPlugin({
-      template: './src/header.html',
-      filename: './header.html'
+      template: './src/about.html',
+      filename: './about.html'
     }),
     new HtmlWebpackPlugin({
       template: './src/landing.html',
       filename: './landing.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/products.html',
+      filename: './products.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/test.html',
+      filename: './test.html'
     })
 
   ],

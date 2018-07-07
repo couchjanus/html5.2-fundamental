@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link type="text/plain" rel="author" href="/humans.txt" />
+        <link rel="manifest" href="site.webmanifest">
+        <link rel="apple-touch-icon" href="/icon.png">
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <!-- Place favicon.ico in the root directory -->
+        <style>
+            .container {
+                max-width: 960px;
+                margin: 0 auto 0 auto;
+            }
+            .block{
+                height: 100px;
+            }
+            .pink {
+                background: pink;
+                width: 100%;
+            }
+            .blue{
+                background: blue;
+                float: left;
+                width: 60%;
+            }
+            .green{
+                background: green;
+                float: left;
+                width: 40%;
+            }
+            .orange{
+                background: orange;
+                clear: left;
+                width: 100%;
+            }
+
+            .relative1 {
+                position: relative;
+                background-color: rgb(15, 216, 82);
+            }
+            .relative2 {
+                position: relative;
+                background-color: rgb(230, 7, 93);
+     
+                /* top: -20px;
+                left: 20px; */
+                width: 500px;
+            }
+
+
+             /* body{
+       
+                position: relative;
+            } */
+           .absolute{
+                background:rgb(4, 41, 247);
+                margin-left: 100px;
+                }
+            
+            .absolute span{
+                background:#f5e505;
+                height:100px;
+                position:absolute;
+            }
+            
+            /* .absolute{
+                background:rgb(4, 41, 247);
+                margin-left: 100px;
+                position: relative;
+            }
+            .absolute span{
+                background:#f5e505;
+                height:100px;
+                
+                position:absolute;
+                left:0;
+                top:0;
+            }
+        */
+
+        .element {
+                background-color: rgba(0, 0, 0, 0.3);
+                padding: 20px;
+                color: rgba(255, 255, 255, 0.4);
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        .parent {
+                color: white;
+                padding: 70px;
+                position: relative;
+                background-color: #0074d9;
+            }
+
+
+        
+        </style>
+    </head>
+    <body>
+        <!-- Add your site or application content here -->
+        <nav class="nav-wrapper"> 
+                <div class="row">    		            
+                    <ul id="nav" class="nav">
+                        <li class="current"><a href="index.html">Home</a></li>
+                        <li class="has-children"><a href="catalogs.html">Catalog</a></li>
+                        <li><a href="about.html">About</a></li>	
+                        <li class="has-children"><a href="blog.html">Blog</a></li>
+                        <li><a href="landing.html">Landing</a></li>	
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul> <!-- end nav -->			   	 
+                </div> 
+        </nav> <!-- end nav-wrap --> 	
+    
+        <hr>
+        
+        <section id="main">
+            <div class="block pink">Header</div>
+            <div class="block blue">Context - left side</div>
+            <div class="block green">Navigation - right side</div>
+            <div class="block orange">Footer</div>
+        </section>
+
+        <div class="cf"></div>
+        <div class="container" id="rel">
+            <div class="row">
+                <h3>Relative</h3>
+                <div class="relative1">
+                    relative ведет себя в точности как static но лишь до тех пор, пока вы не добавите некоторые дополнительные свойства.
+                </div>
+                            
+                <div class="relative2">
+                    Добавление свойств top, right, bottom, и left изменяет позицию элемента, сдвигая его в ту или иную сторону относительно его начального расположения. Другой контент не будет перестраиваться, чтобы заполнить любое свободное пространство, оставленное этим элементом.
+                </div>
+            </div>
+        </div>    
+        <div class="cf"></div>
+
+        <div class="container" id="abs">
+                <div class="row">
+                    <h3>Absolute</h3>
+                    <div class="absolute">
+                        1 Spam 
+                        <span>2 Spam</span> 
+                        3 Spam
+                    </div>
+                                
+                </div>
+            </div>    
+        <div class="cf"></div>
+
+
+        <article class="container">
+                <div class="row">
+                    <h2 class="align-center">Relative</h2>
+                </div>
+        </article>
+        <div class="cf"></div>
+        <div class="container">
+            <div class="row">
+                <div class="parent">
+                    Parent element
+                     
+                    <div class="element">Child element</div>
+                     
+                </div>
+                            
+            </div>
+        </div>    
+        <div class="cf"></div>
+
+
+        <footer>
+            <p class="copyright"> &copy; 2019 Janus Site</p>
+            <nav>
+                <!--brand icon-->
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-github-square"></i></a>
+                <a href="#"><i class="fab fa-youtube-square"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </nav>
+        </footer>
+        
+    </body>
+</html>
+
+

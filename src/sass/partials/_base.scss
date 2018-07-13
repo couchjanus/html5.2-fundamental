@@ -70,56 +70,40 @@ ul ul, ul ol,
 ol ol, ol ul { margin: 6px 0 6px 17px; }
 
 
-/* default */
+/* Grid */
+
 .row {
-  width: 94%;
-  max-width: 2000px;
   margin: 0 auto;
-}
-
-/* row clearing */
-
-.row {
-  border-bottom: solid 1px transparent;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-
-.row > * {
-  float: left;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-.row:after, .row:before {
-  content: '';
-  display: block;
   clear: both;
-  height: 0;
 }
 
-
-
-.columns {
-  position: relative;
-  padding: 0 18px;
-  min-height: 1px;
-  float: left;
+.row:before,
+.row:after {
+  display: table;
+  content: " ";
 }
 
-/* column widths */
-.col-1  { width: 8.33333%; }
-.col-2  { width: 16.66667%; }
-.col-3  { width: 25%; }
-.col-4  { width: 33.33333%; }
-.col-5  { width: 41.66667%; }
-.col-6  { width: 50%; }
-.col-7  { width: 58.33333%; }
-.col-8  { width: 66.66667%; }
-.col-9  { width: 75%; }
-.col-10 { width: 83.33333%; }
-.col-11 { width: 91.66667%; }
-.col-12 { width: 100%; }
+.row:after
+{
+  clear: both;
+}
+
+.col, .col-12, .col-11, .col-10, .col-9, .col-8, .col-7, .col-6, .col-5, .col-4, .col-3, .col-2, .col-1  {
+  padding:  0 1%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.col-12 { width: 100% }
+.col-11 { width: 91.6666666667% }
+.col-10 { width: 83.3333333333% }
+.col-9  { width: 75% }
+.col-8  { width: 66.6666666667% }
+.col-7  { width: 58.3333333333% }
+.col-6  { width: 50% }
+.col-5  { width: 41.6666666667% }
+.col-4  { width: 33.3333333333% }
+.col-3  { width: 25% }
+.col-2  { width: 16.6666666667% }
+.col-1  { width: 8.3333333333% }
+

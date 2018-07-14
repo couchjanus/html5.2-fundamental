@@ -117,6 +117,38 @@ const config = {
     new HtmlWebpackPlugin({
       template: './src/test.html',
       filename: './test.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4base.html',
+      filename: './b4base.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4blog.html',
+      filename: './b4blog.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4table.html',
+      filename: './b4table.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4land.html',
+      filename: './b4land.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4nav.html',
+      filename: './b4nav.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4price.html',
+      filename: './b4price.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4gallery.html',
+      filename: './b4gallery.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/b4forms.html',
+      filename: './b4forms.html'
     })
 
   ],

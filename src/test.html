@@ -12,293 +12,125 @@
             @import url(https://fonts.googleapis.com/css?family=Fjalla+One);
             @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
             @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700,800&amp;subset=cyrillic,cyrillic-ext");
+          
+            .nav1 {
+              width: 15%;
+              min-width: 200px;
+              margin: 80px 42.5%;
+              background: #eee; }
 
+            .nav1 ul {
+              list-style: none;
+              padding: 0px; }
+
+            .nav1 li {
+              float: none;
+              width: 100%; }
+
+            .nav1 li a {
+              display: block;
+              padding: 20px;
+              position: relative;
+              z-index: 2;
+              text-decoration: none;
+              color: #444; }
+
+            .nav1 li a:hover { 
+              border-bottom: 0px;
+              color: #fff; }
+
+            .nav1 li:first-child a { border-left: 10px solid #BAC358; }
+            .nav1 li:nth-child(2) a { border-left: 10px solid #62BDCF; }
+            .nav1 li:nth-child(3) a { border-left: 10px solid #E05735; }
+            .nav1 li:nth-child(4) a { border-left: 10px solid #af821b; }
+            .nav1 li:last-child a { border-left: 10px solid #837D63; }
+
+            .nav1 li a:after {
+              content: "";
+              height: 100%;
+              left: 0;
+              top: 0;
+              width: 0px;
+              position: absolute;
+              transition: all 0.3s ease 0s;
+              -webkit-transition: all 0.3s ease 0s;
+              z-index: -1; }
+
+            .nav1 li a:hover:after { width: 100%; }
+            .nav1 li:first-child a:after { background: #BAC358; }
+            .nav1 li:nth-child(2) a:after { background: #62BDCF; }
+            .nav1 li:nth-child(3) a:after { background: #E05735; }
+            .nav1 li:nth-child(4) a:after { background: #af821b; }
+            .nav1 li:last-child a:after { background: #837D63; }
+
+
+
+
+      ul.nav2 {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+      ul.nav2 li {
+        float: left;
+        padding: 0;
+        background-color: darkslateblue;
+        position: relative;
+        margin-left: none;
+        width: 25%;
+        justify-content: center;
+        align-items: center;
+        text-align: center !important;
+      }
+      ul.nav2 li:after {
+        position: absolute;
+        content: "";
+        left: 0;
+        background-color: transparent;
+        height: 100%;
+        width: 0;
+        top: 0;
+        transition: all 0.5s ease;
+      }
+      ul.nav2 li:nth-child(1) {
+        background-color: lightcoral;
+      }
+      ul.nav2 li:nth-child(1):hover:after {
+        background-color: #eb5252;
+        width: 100%;
+      }
+      ul.nav2 li:nth-child(2) {
+        background-color: darkseagreen;
+      }
+      ul.nav2 li:nth-child(2):hover:after {
+        background-color: #6fa96f;
+        width: 100%;
+        left: 0;
+      }
+      ul.nav2 li:nth-child(3) {
+        background-color: skyblue;
+      }
+      ul.nav2 li:nth-child(3):hover:after {
+        background-color: #5bbce4;
+        width: 100%;
+      }
+      ul.nav2 li:nth-child(4) {
+        background-color: orange;
+      }
+      ul.nav2 li:nth-child(4):hover:after {
+        background-color: #cc8400;
+        width: 100%;
+      }
+      ul.nav2 li a {
+        text-decoration: none;
+        display: block;
+        width: 100%;
+        padding: 3em 0;
+        color: white;
+        position: relative;
+        z-index: 10;
+      }
         
-        .rwd-table {
-          margin: 1em 0;
-          min-width: 300px;
-        }
-        .rwd-table tr {
-          border-top: 1px solid #ddd;
-          border-bottom: 1px solid #ddd;
-        }
-        .rwd-table th {
-          display: none;
-        }
-        .rwd-table td {
-          display: block;
-        }
-
-        /* 
-          CSS псевдо-класс :first-child 
-          находит любой элемент, 
-          являющийся первым в своём родителе.
-        */
-        .rwd-table td:first-child {
-          padding-top: .5em;
-        }
-
-        /*
-          CSS псевдо-класс :last-child 
-          находит любой элемент, 
-          являющийся последним в его родителе.
-        */
-        .rwd-table td:last-child {
-          padding-bottom: .5em;
-        }
-
-        /**/
-        .rwd-table td:before {
-          content: attr(data-th) ": ";
-          font-weight: bold;
-          width: 6.5em;
-          display: inline-block;
-        }
-
-
-         @media (min-width: 480px) {
-          .rwd-table td:before {
-            display: none;
-          }
-        }
-        
-        @media (min-width: 480px) {
-          .rwd-table th, .rwd-table td {
-            display: table-cell;
-            padding: .25em .5em;
-          }
-          .rwd-table th:first-child, .rwd-table td:first-child {
-            padding-left: 0;
-          }
-          .rwd-table th:last-child, .rwd-table td:last-child {
-            padding-right: 0;
-          }
-        }
-
-
-        h1.hrw {
-          font-weight: 800;
-          letter-spacing: -1px;
-          font-size: 2em;
-          color: #93b876;
-        }
-
-        .resp-table {
-          background: #93b876;
-          color: #fff;
-          border-radius: .4em;
-          overflow: hidden;
-        }
-        .resp-table tr {
-          border-color: #46637f;
-        }
-        .resp-table th, .resp-table td {
-          margin: .5em 1em;
-        }
-
-        .resp-table th, .resp-table td:before {
-          color: #dd5;
-        }
-
-        @media (min-width: 480px) {
-          .resp-table th, .resp-table td {
-            padding: 1em !important;
-          }
-        }
-
-
-        .table {
-          margin: 0 0 40px 0;
-          width: 100%;
-          box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-          display: table;
-        }
-        @media screen and (max-width: 580px) {
-          .table {
-            display: block;
-          }
-        }
-
-
-        .tr {
-          display: table-row;
-          background: #f6f6f6;
-        }
-        .tr:nth-of-type(odd) {
-          background: #e9e9e9;
-        }
-        .tr.header {
-          font-weight: 900;
-          color: #ffffff;
-          background: #ea6153;
-        }
-        .tr.green {
-          background: #27ae60;
-        }
-        /*
-        @media screen and (max-width: 580px) {
-          .tr {
-            padding: 14px 0 7px;
-            display: block;
-          }
-          .tr.header {
-            padding: 0;
-            height: 6px;
-          }
-        }
-
-        
-       */ 
-
-        @media screen and (max-width: 580px) {
-          .tr {
-            padding: 14px 0 7px;
-            display: block;
-          }
-          .tr.header {
-            padding: 0;
-            height: 6px;
-          }
-          .tr.header .cell {
-            display: none;
-          }
-          .tr .cell {
-            margin-bottom: 10px;
-          }
-          .tr .cell:before {
-            margin-bottom: 3px;
-            content: attr(data-title);
-            min-width: 98px;
-            font-size: 10px;
-            line-height: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-            color: #969696;
-            display: block;
-          }
-        }
-
-        .cell {
-          padding: 6px 12px;
-          display: table-cell;
-        }
-        @media screen and (max-width: 580px) {
-          .cell {
-            padding: 2px 16px;
-            display: block;
-          }
-        }
-
-
-        .tr:hover {
-          filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-          opacity: 0.5;
-          /* uncomment for blur effect */
-          /* color:transparent;
-          text-shadow(0px 0px 2px rgba(0,0,0,0.8)); */
-        }
-
-        .tr:hover .cell {
-          text-shadow: none;
-          color: #2d2d2d;
-          filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
-          opacity: 1;
-        }
-
-        /* Contact 1 */
-
-        /*
-         .contact--h1 {
-          text-align: center;
-          color: #93b876;
-          text-shadow: 1px 1px 0 white;
-        }
-
-        .contact--form {
-          max-width: 600px;
-          text-align: center;
-          margin: 20px auto;
-        }
-        .contact--form input, .contact--form textarea {
-          border: 0;
-          outline: 0;
-          padding: 1em;
-          -moz-border-radius: 8px;
-          -webkit-border-radius: 8px;
-          border-radius: 8px;
-          display: block;
-          width: 100%;
-          margin-top: 1em;
-          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          resize: none;
-        }
-
-        .contact--form textarea {
-          height: 126px;
-        }
-
-        */
-
-
-
-        /* Contact 2 */
-
-        .contact--h1 {
-          text-align: center;
-          color: #93b876;
-          text-shadow: 1px 1px 0 white;
-        }
-
-        .contact--form {
-          max-width: 600px;
-          text-align: center;
-          margin: 20px auto;
-        }
-        .contact--form input, .contact--form textarea {
-          border: 0;
-          outline: 0;
-          padding: 1em;
-          -moz-border-radius: 8px;
-          -webkit-border-radius: 8px;
-          border-radius: 8px;
-          display: block;
-          background: #fff;
-          color: #999;
-          width: 100%;
-          margin-top: 1em;
-          -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-          resize: none;
-        }
-
-        .contact--form textarea {
-          height: 126px;
-        }
-
-        .contact--form input:focus, .contact--form textarea:focus {
-          -moz-box-shadow: 0 0px 2px #e74c3c !important;
-          -webkit-box-shadow: 0 0px 2px #e74c3c !important;
-          box-shadow: 0 0px 2px #e74c3c !important;
-          background: #f1f1f1;
-          color: #e74c3c;
-        }
-        .contact--form .input-submit {
-          color: white;
-          background: #e74c3c;
-          cursor: pointer;
-        }
-        .contact--form .input-submit:hover {
-          -moz-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-          -webkit-box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-          box-shadow: 0 1px 1px 1px rgba(170, 170, 170, 0.6);
-        }
-
-
-
-
         </style>
     </head>
     <body>
@@ -323,211 +155,31 @@
 
                 <div class="row">
         
-                    <main id="main" class="columns col-12">
+                    <main class="columns col-12">
+
+       
         
-                      <h1>Responsive Table</h1>
-                      <table class="rwd-table">
-                        <tr>
-                          <th>Client</th>
-                          <th>Address</th>
-                          <th>Year</th>
-                          <th>Total</th>
-                        </tr>
-                      
-                        <tbody>
-          
-                        <tr>
-                          <td data-th="Client Title">Star Cat</td>
-                          <td data-th="Address">Ukraine, Kiev</td>
-                          <td data-th="Year">2017</td>
-                          <td data-th="Total">$460,935</td>
-                        </tr>
-                        <tr>
-                          <td data-th="Client Title">Howard  Cat</td>
-                          <td data-th="Address">Ukraine, Kiev</td>
-                          <td data-th="Year">2015</td>
-                          <td data-th="Total">$16,295</td>
-                        </tr>
-                        <tr>
-                          <td data-th="Client Title">Raby Cat</td>
-                          <td data-th="Address">Ukraine, Kiev</td>
-                          <td data-th="Year">2016</td>
-                          <td data-th="Total">$115,000</td>
-                        </tr>
-                        </tbody>
-                      </table>
+                      <h1 id="anim1">CSS animated menu</h1>
 
-                      <h1 class="hrw" id="resp1">Responsive Table</h1>
-                        <table class="rwd-table resp-table">
-                            <tr>
-                            <th>Client</th>
-                            <th>Address</th>
-                            <th>Year</th>
-                            <th>Total</th>
-                            </tr>
-                            <tr>
-                            <td data-th="Client Title">Star Cat</td>
-                            <td data-th="Address">Ukraine, Kiev</td>
-                            <td data-th="Year">2017</td>
-                            <td data-th="Total">$460,935</td>
-                            </tr>
-                            <tr>
-                            <td data-th="Client Title">Howard  Cat</td>
-                            <td data-th="Address">Ukraine, Kiev</td>
-                            <td data-th="Year">2015</td>
-                            <td data-th="Total">$16,295</td>
-                            </tr>
-                            <tr>
-                            <td data-th="Client Title">Rady Cat</td>
-                            <td data-th="Address">Ukraine, Kiev</td>
-                            <td data-th="Year">2016</td>
-                            <td data-th="Total">$115,000</td>
-                            </tr>
-                        </table>
+                      <div class="nav1">
+                          <ul>
+                              <li><a href="#">Menu 1</a></li>
+                              <li><a href="#">Menu 2</a></li>
+                              <li><a href="#">Menu 3</a></li>
+                              <li><a href="#">Menu 4</a></li>
+                              <li><a href="#">Menu 5</a></li>
+                          </ul>
+                      </div>
 
 
-                    <h1 class="hrw" id="resp2">Responsive Table</h1>
-                    <table class="rwd-table resp-table">
-                        <tr>
-                        <th>Client</th>
-                        <th>Address</th>
-                        <th>Year</th>
-                        <th>Total</th>
-                        </tr>
-                        <tr>
-                        <td data-th="Client Title">Star Cat</td>
-                        <td data-th="Address">Ukraine, Kiev</td>
-                        <td data-th="Year">2017</td>
-                        <td data-th="Total">$460,935</td>
-                        </tr>
-                        <tr>
-                        <td data-th="Client Title">Howard  Cat</td>
-                        <td data-th="Address">Ukraine, Kiev</td>
-                        <td data-th="Year">2015</td>
-                        <td data-th="Total">$16,295</td>
-                        </tr>
-                        <tr>
-                        <td data-th="Client Title">Rady Cat</td>
-                        <td data-th="Address">Ukraine, Kiev</td>
-                        <td data-th="Year">2016</td>
-                        <td data-th="Total">$115,000</td>
-                        </tr>
-                    </table>
-
-                    <hr>
-                    <h1 class="hrw" id="dtable">Display Table</h1>
-
-                <div class="table">
-
-                  <div class="tr table-header green">
-                    <div class="cell">
-                      Product
-                    </div>
-                    <div class="cell">
-                      Unit Price
-                    </div>
-                    <div class="cell">
-                      Quantity
-                    </div>
-                    <div class="cell">
-                      Date Sold
-                    </div>
-                    <div class="cell">
-                      Status
-                    </div>
-                  </div>
-
-                  <div class="tr">
-                    <div class="cell" data-title="Product">
-                      Solid Cat
-                    </div>
-                    <div class="cell" data-title="Unit Price">
-                      $800
-                    </div>
-                    <div class="cell" data-title="Quantity">
-                      10
-                    </div>
-                    <div class="cell" data-title="Date Sold">
-                      03/15/2018
-                    </div>
-                    <div class="cell" data-title="Status">
-                      Waiting for Pickup
-                    </div>
-                  </div>
-
-                  <div class="tr">
-                    <div class="cell" data-title="Product">
-                      Leather Cat
-                    </div>
-                    <div class="cell" data-title="Unit Price">
-                      $45
-                    </div>
-                    <div class="cell" data-title="Quantity">
-                      120
-                    </div>
-                    <div class="cell" data-title="Date Sold">
-                      02/28/2018
-                    </div>
-                    <div class="cell" data-title="Status">
-                      In Transit
-                    </div>
-                  </div>
-
-                  <div class="tr">
-                    <div class="cell" data-title="Product">
-                      Apple Thunderbolt Cat
-                    </div>
-                    <div class="cell" data-title="Unit Price">
-                      $1000
-                    </div>
-                    <div class="cell" data-title="Quantity">
-                      25
-                    </div>
-                    <div class="cell" data-title="Date Sold">
-                      02/10/2018
-                    </div>
-                    <div class="cell" data-title="Status">
-                      Delivered
-                    </div>
-                  </div>
-
-                  <div class="tr">
-                    <div class="cell" data-title="Product">
-                      Bose studio Cat
-                    </div>
-                    <div class="cell" data-title="Unit Price">
-                      $60
-                    </div>
-                    <div class="cell" data-title="Quantity">
-                      90
-                    </div>
-                    <div class="cell" data-title="Date Sold">
-                      01/14/2018
-                    </div>
-                    <div class="cell" data-title="Status">
-                      Delivered
-                    </div>
-                  </div>
-
-                </div>
-
-                <hr>
-                <h1 class="contact--h1" id="contact1">Contact Us</h1>
-
-                <form class="contact--form cf">
-
-                        <div class="half left cf">
-                          <input type="text" id="input-name" placeholder="Name">
-                          <input type="email" id="input-email" placeholder="Email address">
-                          <input type="text" id="input-subject" placeholder="Subject">
-                        </div>
+                      <h1 id="anim2">Colourful CSS animated menu</h1>
+                      <ul class="nav2">
+                        <li><a href="#">Hup</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                        <li><a href="#">Four</a></li>
+                      </ul>
         
-                        <div class="half right cf">
-                          <textarea name="message" type="text" id="input-message" placeholder="Message"></textarea>
-                        </div>
-                        <input type="submit" value="Submit" class="input-submit">
-                      </form>
-
         
                     </main> <!-- end main -->
         

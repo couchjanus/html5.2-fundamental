@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+
+            body > h1 {
+                font-size: 4rem;
+                text-align: center;
+            }
+    
+            img {
+                width: 100%; height: auto;
+            }
+    
+    
+            .flex-container {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                /* Сначала создадим flex-контекст */
+                display: flex;
+    
+                /* Теперь определим направление потока и хотим ли мы, чтобы элементы
+                    переносились на новую строку
+                */
+                flex-flow: row wrap;
+                /* Теперь определим, как будет распределяться пространство */
+                justify-content: space-around;
+             
+            }
+    
+            
+            .flex-item {
+                background: #CC6600;
+                padding: 5px;
+                width: 200px;
+                height: 150px;
+                margin-top: 10px;
+                line-height: 150px;
+                text-align: center;
+            }
+    
+            .flex-item:last-child{
+                background-color:#e7cd3c;
+                order: -1;
+            }
+    
+            .nav-menu {
+                background-color: #CC6600;
+                list-style: none;
+                margin: 0;
+                display: flex;
+                flex-flow: row wrap;
+                /* justify-content: flex-end; */
+                /* justify-content: flex-start; */
+                /* justify-content: center; */
+                /* justify-content: space-between; */
+                justify-content: space-around;
+    
+            }
+    
+            .nav-item a {
+                color: #FFF;
+                display: block;
+                padding: 15px 20px;
+                text-decoration: none;
+            }
+    
+            .nav-item a:hover,
+                .nav-item a:focus {
+                background-color: tomato;
+            }
+    
+            @media (max-width: 767px) {
+                .nav-menu {
+                    flex-flow: column wrap;
+                    justify-content: space-around;
+                    padding: 0;
+                }
+    
+                .nav-item a {
+                    border-top: 1px solid rgba(255, 255, 255, 0.4);
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    text-align: center;
+                }
+            }
+    
+            .flex-section {
+                display: flex;
+            }
+    
+            .flex-article {
+                margin: 1rem;
+                flex-basis: 250px;
+                flex-shrink: 0; 
+            }
+    
+            .breaking {
+                flex-grow: 2;
+            }
+    
+            @media screen and (max-width: 750px) {
+                body > h1 { font-size: 2rem; }
+                .flex-section {
+                    flex-direction: column;
+                }
+            }
+    
+            .main {
+                min-height: 800px;
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                flex-flow: row;
+            }
+    
+            .main > article {
+                margin: 4px;
+                padding: 5px;
+                border: 1px solid #cccc33;
+                border-radius: 7pt;
+                background: #dddd88;
+                flex: 3 1 80%;
+                order: 2;
+            }
+    
+            .main > aside {
+                margin: 4px;
+                padding: 5px;
+                border: 1px solid #8888bb;
+                border-radius: 7pt;
+                background: #ccccff;
+                flex: 1 6 20%;
+                order: 3;
+            }
+            footer {
+                display: block;
+                margin: 4px;
+                padding: 5px;
+                min-height: 100px;
+                border: 1px solid #eebb55;
+                border-radius: 7pt;
+                background: #ffeebb;
+            }
+    
+            @media all and (max-width: 640px) {
+                .main {
+                    flex-direction: column;
+                }
+    
+                header, .main > article, .main > aside {
+                /* Return them to document order */
+                    order: 0;
+                }
+    
+                .main > aside, footer {
+                    min-height: 50px;
+                    max-height: 50px;
+                }
+            }
+    
+        </style>
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+        </header>
+        <div class='main'>
+
+            <article>
+            
+                <h1>Hello, Cats!</h1>
+        
+                <ul class="flex-container">
+                        <li class="flex-item"><img src="images/cat1.jpg"></li>
+                        <li class="flex-item"><img src="images/cat2.jpg"></li>
+                        <li class="flex-item"><img src="images/cat3.jpg"></li>
+                        <li class="flex-item"><img src="images/cat4.jpg"></li>
+                        <li class="flex-item"><img src="images/cat5.jpg"></li>
+                </ul>
+        
+        
+            <h1>The Fortean Cats World Times</h1>
+            
+            <section class="flex-section">
+            
+                <article class="flex-article breaking">
+                    <img src="images/cat6.jpg" alt="Photograph of a flying saucer over the US Capitol building">
+                    <h1>Washington D.C. Attacked By Flying Cats</h1>
+                    <h2>Dateline Washington D.C.</h2>
+                    <h3>Frank Bragg reporting</h3>
+                    <p>The country was brought to a standstill today when flying saucers – presumably from Mars, although Venusians have also been suspected – appeared over the nation’s capital, intent on destruction. Curiously, they only attacked Pennsylvania Avenue, and have not appeared elsewhere in the country.
+                </article>
+        
+                <article class="flex-article">
+                    <img src="images/cat3.jpg" alt="Photograph of a Bigfoot">
+                    <h1>Bigfoot Found, Shot, Killed</h1>
+                    <h2>Dateline Washington State</h2> <h3>Jessica Walsh reporting</h3>
+                    <p>The first conclusive proof of the elusive Sasquatch was found today, when one of the ape-men was found and killed by a hunter in the north-eastern corner of the state.
+                    <p>The hunter plans to tour the pelt in the fall.
+                </article>
+                <article class="flex-article">
+                    <img src="images/cat2.jpg" alt="Photograph of an alligator emerging from an open manhole cover">
+                    <h1>Nest of Alligators Found in New York Sewers</h1>
+                    <h2>Dateline New York City</h2>
+                    <h3>Ted Sturgis reporting</h3>
+                    <p>Years of rumours were confirmed yesterday when a nest of alligators were found in the sewers of New York City, just south of Times Square. The largest, which locals have dubbed “Mugsy”, measures over 21 feet long.
+                </article>
+            </section>
+        </article>
+          <aside>aside</aside>
+          
+        </div>
+      
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>

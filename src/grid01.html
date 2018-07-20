@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+
+            body > h1 {
+                    font-size: 4rem;
+                    text-align: center;
+            }
+        
+            .nav-menu {
+                    background-color: #CC6600;
+                    list-style: none;
+                    margin: 0;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+        
+            }
+        
+            .nav-item a {
+                    color: #FFF;
+                    display: block;
+                    padding: 15px 20px;
+                    text-decoration: none;
+            }
+        
+            .nav-item a:hover,
+                    .nav-item a:focus {
+                    background-color: tomato;
+            }
+        
+            @media (max-width: 767px) {
+                    .nav-menu {
+                        flex-flow: column wrap;
+                        justify-content: space-around;
+                        padding: 0;
+                }
+        
+               .nav-item a {
+                        border-top: 1px solid rgba(255, 255, 255, 0.4);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                    }
+            }
+        
+            @media screen and (max-width: 750px) {
+                    body > h1 { font-size: 2rem; }
+            }
+            footer {
+                    display: block;
+                    margin: 4px;
+                    padding: 5px;
+                    min-height: 100px;
+                    border: 1px solid #eebb55;
+                    border-radius: 7pt;
+                    background: #ffeebb;
+            }
+        
+            @media all and (max-width: 640px) {
+                   header {
+                    /* Return them to document order */
+                        order: 0;
+                    }
+       
+                    footer {
+                        min-height: 50px;
+                        max-height: 50px;
+                    }
+            }
+        
+      
+                /* Drop Down */
+                .drop-down li {
+                    position: relative;
+                }
+                .drop-down li ul {
+                    display: none;
+                    width: 100%;
+                    position: absolute;
+                    list-style-type: none;
+                    background-color: #CC6600;
+                    margin: 0;
+                    flex-flow: row wrap;
+                    align-items: flex-start;
+                }
+                        
+                .drop-down li:hover > ul {
+                    display: flex;
+                    
+                }
+        
+                footer[role="contentinfo"] {
+                    height: 40px;
+                    background: #FF9D3C;
+                    vertical-align: middle;
+                    align-items: center;
+                }
+        /* 
+      Как работают элементы div?
+      div - элементы уровня блока. Они не будут терпеть никаких элементов ни с левой или с правой стороне и, таким образом, будут занимать всю ширину. Однако высота элементов div вычисляется из его потомков. div будет занимать столько высоты, сколько требуется для отображения содержимого.
+      */
+      .grid-container div{
+          color:#fff;
+          font-size: 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .grid-container div:nth-child(1n){
+          background-color: #C1DBB3;
+      }
+      .grid-container div:nth-child(3n){
+          background-color: #7798AB;
+      }
+      .grid-container div:nth-child(2n){
+          background-color: #FF8966;
+      }
+      .grid-container{
+          /* display:inline-grid;  */
+          display:grid;
+          /* grid-template-columns: 1fr 1fr 1fr; 
+          grid-template-rows:1fr 1fr; */
+
+          /* 
+              :: grid-template-columns:repeat(3,1fr) :: 
+                  repeat(no of columns, width of a column)
+                  1fr takes the entire available width
+              :: grid-template-rows:repeat(2,1fr) :: 
+                  repeat(no of rows, height of a row)
+                  1fr takes the entire available width
+        
+          */
+          /* grid-template-columns:repeat(3,1fr); 
+          
+          grid-template-rows:repeat(2,1fr); */
+
+           /* 
+              :: grid-gap:5px ::
+              Gap between each grid element    
+          */
+          
+          /* grid-gap: 5px;  */
+
+          /*
+              Shorthand for defining rows and columns
+              grid-template: repeat(2,1fr) / repeat(3,1fr)
+              Remember drawing an L: First rows & then columns
+          */
+          /* grid-template: repeat(2,1fr) / repeat(3,1fr); */
+
+      }
+
+    </style>      
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu drop-down">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                            <li class="nav-item"><a href="#">Drop Down</a>
+                                <ul>
+                                    <li><a href="#">Drop A</a></li>
+                                    <li><a href="#">Drop B</a></li>
+                                    <li><a href="#">Drop C</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+        </header>
+        <h1>Hello, Grids Cats!</h1>
+
+        <div class="grid-container">
+          <div><img src="images/cat1.jpg"></div>
+          <div><img src="images/cat2.jpg"></div>
+          <div><img src="images/cat3.jpg"></div>
+          <div><img src="images/cat4.jpg"></div>
+          <div><img src="images/cat5.jpg"></div>
+          <div><img src="images/cat1.jpg"></div>
+        </div>
+      
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>

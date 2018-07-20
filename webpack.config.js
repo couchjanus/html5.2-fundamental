@@ -119,38 +119,106 @@ const config = {
       filename: './test.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4base.html',
-      filename: './b4base.html'
+      template: './src/flex01.html',
+      filename: './flex01.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4blog.html',
-      filename: './b4blog.html'
+      template: './src/flex02.html',
+      filename: './flex02.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4table.html',
-      filename: './b4table.html'
+      template: './src/flex03.html',
+      filename: './flex03.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4land.html',
-      filename: './b4land.html'
+      template: './src/flex04.html',
+      filename: './flex04.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4nav.html',
-      filename: './b4nav.html'
+      template: './src/flex05.html',
+      filename: './flex05.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4price.html',
-      filename: './b4price.html'
+      template: './src/flex06.html',
+      filename: './flex06.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4gallery.html',
-      filename: './b4gallery.html'
+      template: './src/flex07.html',
+      filename: './flex07.html'
     }),
     new HtmlWebpackPlugin({
-      template: './src/b4forms.html',
-      filename: './b4forms.html'
+      template: './src/flex08.html',
+      filename: './flex08.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/flex09.html',
+      filename: './flex09.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/flex10.html',
+      filename: './flex10.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/flex11.html',
+      filename: './flex11.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid01.html',
+      filename: './grid01.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid02.html',
+      filename: './grid02.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid03.html',
+      filename: './grid03.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid04.html',
+      filename: './grid04.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid05.html',
+      filename: './grid05.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid06.html',
+      filename: './grid06.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid07.html',
+      filename: './grid07.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid08.html',
+      filename: './grid08.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid09.html',
+      filename: './grid09.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid10.html',
+      filename: './grid10.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid11.html',
+      filename: './grid11.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid12.html',
+      filename: './grid12.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid13.html',
+      filename: './grid13.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/grid14.html',
+      filename: './grid14.html'
     })
-
+    
   ],
   optimization: isProduction ? {
     minimizer: [

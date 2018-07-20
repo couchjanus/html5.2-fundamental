@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+
+        .flex-container {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            
+            /* Сначала создадим flex-контекст */
+            /* display: inline-flex; */
+            display: flex;
+            /* display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex; */
+
+            /* Теперь определим направление потока
+              * flex-direction: row | row-reverse | column | column-reverse
+              * Устанавливает главную ось main-axis, определяя тем самым направление для flex-элементов, размещаемых в контейнере.
+              * row (по умолчанию): слева направо для ltr, справа налево для rtl;
+              * row-reverse: справа налево для ltr, слева направо для rtl;
+              * column: аналогично row, сверху вниз;
+              * column-reverse: аналогично row-reverse, снизу вверх.
+            */
+
+            /* row (по умолчанию): слева направо для ltr, справа налево для rtl; */
+            /* flex-direction: row; */
+            /* row-reverse: справа налево для ltr, слева направо для rtl; */
+            /* flex-direction:row-reverse; */
+            /* column: аналогично row, сверху вниз; */
+            /* flex-direction:column; */
+            /* column-reverse: аналогично row-reverse, снизу вверх. */
+            /* flex-direction:column-reverse; */
+            /* flex-direction:initial; */
+            /* flex-direction:unset; */
+
+            /* flex-wrap: nowrap; */
+            /* flex-wrap: wrap; */
+            /* flex-wrap: wrap-reverse; */
+        }
+        .flex-item {
+              background: tomato;
+              padding: 5px;
+              max-width: 100%;
+              width: 270px;
+              height: 200px;
+              margin: auto;
+              line-height: 150px;
+              text-align: center;
+        }
+        .parent {
+          display: flex;
+          height: 300px; /* Или что угодно */
+        }
+        .child {
+          height: auto; /* Или что угодно */
+          margin: auto;  /* Магия! */
+        }
+
+        </style>
+    </head>
+    <body>
+      
+      <hr>
+              
+      <hr>
+        <ul class="flex-container">
+            <li class="flex-item"><img src="/images/cat1.jpg"></li>
+            <li class="flex-item"><img src="/images/cat2.jpg"></li>
+            <li class="flex-item"><img src="/images/cat3.jpg"></li>
+            <li class="flex-item"><img src="/images/cat4.jpg"></li>
+            <li class="flex-item"><img src="/images/cat5.jpg"></li>
+      </ul>
+      
+      <hr>
+        <div class="parent">
+          <div class="child">
+            <h1>Выравнивание точно по центру</h1>
+            <img src="/images/cat1.jpg">
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer" class="footer text-center">
+          <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+        </footer>
+     
+    </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+            body > h1 {
+                    font-size: 4rem;
+                    text-align: center;
+            }
+        
+            .nav-menu {
+                    background-color: #CC6600;
+                    list-style: none;
+                    margin: 0;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+        
+            }
+        
+            .nav-item a {
+                    color: #FFF;
+                    display: block;
+                    padding: 15px 20px;
+                    text-decoration: none;
+            }
+        
+            .nav-item a:hover,
+                    .nav-item a:focus {
+                    background-color: tomato;
+            }
+        
+            @media (max-width: 767px) {
+                    .nav-menu {
+                        flex-flow: column wrap;
+                        justify-content: space-around;
+                        padding: 0;
+                }
+        
+               .nav-item a {
+                        border-top: 1px solid rgba(255, 255, 255, 0.4);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                    }
+            }
+        
+            @media screen and (max-width: 750px) {
+                    body > h1 { font-size: 2rem; }
+            }
+            footer {
+                    display: block;
+                    margin: 4px;
+                    padding: 5px;
+                    min-height: 100px;
+                    border: 1px solid #eebb55;
+                    border-radius: 7pt;
+                    background: #ffeebb;
+            }
+        
+            @media all and (max-width: 640px) {
+                   header {
+                    /* Return them to document order */
+                        order: 0;
+                    }
+       
+                    footer {
+                        min-height: 50px;
+                        max-height: 50px;
+                    }
+            }
+            .container > div, .container2 > div{
+    color:#fff;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > div > img, .container2 > div > img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.container > div:nth-child(1n),
+.container2 > div:nth-child(1n){
+    background-color: #C1DBB3;
+}
+.container > div:nth-child(3n),
+.container2 > div:nth-child(3n){
+    background-color: #7798AB;
+}
+.container > div:nth-child(2n),
+.container2 > div:nth-child(2n){
+    background-color: #FF8966;
+}
+.container > div:nth-child(4n),
+.container2 > div:nth-child(4n){
+    background-color: #ffcc5c;
+}
+
+.container {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+
+.container2 {
+    border: 1px solid black;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-rows: 100px 100px;
+}
+        </style>
+          
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu drop-down">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+        </header>
+        <h1 class="title">AUTO-FIT</h1>
+        <div class="container">
+            <div class="vertical">
+                <img src="images/cat1.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat2.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat3.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat4.jpg"/>
+            </div>
+            <div class="vertical">
+                <img src="images/cat5.jpg"/>
+            </div>
+        </div>
+        <h1 class="title">AUTO-FILL</h1>
+        <div class="container2">
+                <div class="vertical">
+                        <img src="images/cat1.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat2.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat3.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat4.jpg"/>
+                    </div>
+                    <div class="vertical">
+                        <img src="images/cat5.jpg"/>
+                    </div>
+        </div>
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>

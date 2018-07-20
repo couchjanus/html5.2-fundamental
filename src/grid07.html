@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+            body > h1 {
+                    font-size: 4rem;
+                    text-align: center;
+            }
+        
+            .nav-menu {
+                    background-color: #CC6600;
+                    list-style: none;
+                    margin: 0;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+        
+            }
+        
+            .nav-item a {
+                    color: #FFF;
+                    display: block;
+                    padding: 15px 20px;
+                    text-decoration: none;
+            }
+        
+            .nav-item a:hover,
+                    .nav-item a:focus {
+                    background-color: tomato;
+            }
+        
+            @media (max-width: 767px) {
+                    .nav-menu {
+                        flex-flow: column wrap;
+                        justify-content: space-around;
+                        padding: 0;
+                }
+        
+               .nav-item a {
+                        border-top: 1px solid rgba(255, 255, 255, 0.4);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                    }
+            }
+        
+            @media screen and (max-width: 750px) {
+                    body > h1 { font-size: 2rem; }
+            }
+            footer {
+                    display: block;
+                    margin: 4px;
+                    padding: 5px;
+                    min-height: 100px;
+                    border: 1px solid #eebb55;
+                    border-radius: 7pt;
+                    background: #ffeebb;
+            }
+        
+            @media all and (max-width: 640px) {
+                   header {
+                    /* Return them to document order */
+                        order: 0;
+                    }
+       
+                    footer {
+                        min-height: 50px;
+                        max-height: 50px;
+                    }
+            }
+            p {
+    color: #96ceb4;
+    text-align: center;
+}
+
+.flexbox-header>div {
+    display: flex;
+    font-size: 1em;
+    padding: 10px 20px;
+}
+
+.flexbox-header {
+    background-color: #96ceb4;
+    color: #ffeead;
+}
+
+.header {
+    background-color: #96ceb4;
+}
+
+.header :nth-child(2) {
+    padding: 0 40px;
+}
+
+.menu {
+    background-color: #ff6f69;
+}
+
+.content {
+    background-color: #ffcc5c;
+}
+
+.footer {
+    background-color: #88d8b0;
+}
+
+.grid-page>div {
+    color: #ffeead;
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+ 
+.flexbox-header {
+    display: flex;
+}
+
+.flexbox-header > div:nth-child(3) {
+    margin-left: auto;
+}
+
+.grid-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px 200px 40px;
+}
+
+.header {
+    grid-column: 1 / -1;
+}
+
+.menu {
+    grid-column: 1 / 2;
+}
+
+.content {
+    grid-column: 2 / -1;
+}
+
+.footer {
+    grid-column: 1 / -1;
+}
+        </style>
+          
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu drop-down">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+        </header>
+        
+        <p>FLEXBOX HEADER</p>
+        <div class="flexbox-header">
+            <div>HOME</div>
+            <div>SEARCH</div>
+            <div>LOGOUT</div>
+        </div>
+        <br>
+        <p>GRID PAGE</p>
+        <div class="grid-page">
+            <div class="header">HEADER</div>
+            <div class="menu">MENU</div>
+            <div class="content">CONTENT</div>
+            <div class="footer">FOOTER</div>
+        </div>
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>

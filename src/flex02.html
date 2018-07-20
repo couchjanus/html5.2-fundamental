@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+
+        .flex-container {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            /* Сначала создадим flex-контекст */
+            display: flex;
+
+            /* Теперь определим направление потока и хотим ли мы, чтобы элементы
+                переносились на новую строку
+                flex-flow: row wrap;
+                * Помните, что это тоже самое, что и:
+                * flex-direction: row;
+                * flex-wrap: wrap;
+            */
+            
+            flex-flow: row wrap;
+
+            /* Теперь определим, как будет распределяться пространство */
+            justify-content: space-around;
+        }
+        .flex-item {
+            background: tomato;
+            padding: 5px;
+            width: 200px;
+            height: 150px;
+            margin-top: 10px;
+            line-height: 150px;
+            text-align: center;
+        }
+
+        .nav-menu {
+            background-color: #CC6600;
+            list-style: none;
+            margin: 0;
+            display: flex;
+            flex-flow: row wrap;
+            /* justify-content: flex-end; */
+            /* justify-content: flex-start; */
+            /* justify-content: center; */
+            /* justify-content: space-between; */
+            justify-content: space-around;
+
+        }
+
+        .nav-item a {
+            color: #FFF;
+            display: block;
+            padding: 15px 20px;
+            text-decoration: none;
+        }
+
+        .nav-item a:hover,
+            .nav-item a:focus {
+            background-color: tomato;
+        }
+
+        @media (max-width: 767px) {
+            .nav-menu {
+                flex-flow: column wrap;
+                justify-content: space-around;
+                padding: 0;
+            }
+
+            .nav-item a {
+                border-top: 1px solid rgba(255, 255, 255, 0.4);
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                text-align: center;
+            }
+        }
+        .flex-item:last-child{
+            background-color:#e7cd3c;
+            order: -1;
+        }
+        </style>
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+        </header>
+        <h1>Hello, Cats!</h1>    
+      <hr>
+        <ul class="flex-container">
+            <li class="flex-item"><img src="/images/cat1.jpg"></li>
+            <li class="flex-item"><img src="/images/cat2.jpg"></li>
+            <li class="flex-item"><img src="/images/cat3.jpg"></li>
+            <li class="flex-item"><img src="/images/cat4.jpg"></li>
+            <li class="flex-item"><img src="/images/cat5.jpg"></li>
+      </ul>
+      
+      <hr>
+      
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>

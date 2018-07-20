@@ -1,0 +1,214 @@
+<!DOCTYPE HTML>
+<!-- comments -->
+<html>
+    <head>
+        <title>Peculiar Shopaholic</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+        <style>
+            body > h1 {
+                    font-size: 4rem;
+                    text-align: center;
+            }
+        
+            .nav-menu {
+                    background-color: #CC6600;
+                    list-style: none;
+                    margin: 0;
+                    display: flex;
+                    flex-flow: row wrap;
+                    justify-content: space-around;
+        
+            }
+        
+            .nav-item a {
+                    color: #FFF;
+                    display: block;
+                    padding: 15px 20px;
+                    text-decoration: none;
+            }
+        
+            .nav-item a:hover,
+                    .nav-item a:focus {
+                    background-color: tomato;
+            }
+        
+            @media (max-width: 767px) {
+                    .nav-menu {
+                        flex-flow: column wrap;
+                        justify-content: space-around;
+                        padding: 0;
+                }
+        
+               .nav-item a {
+                        border-top: 1px solid rgba(255, 255, 255, 0.4);
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                        text-align: center;
+                    }
+            }
+        
+            @media screen and (max-width: 750px) {
+                    body > h1 { font-size: 2rem; }
+            }
+            footer {
+                    display: block;
+                    margin: 4px;
+                    padding: 5px;
+                    min-height: 100px;
+                    border: 1px solid #eebb55;
+                    border-radius: 7pt;
+                    background: #ffeebb;
+            }
+        
+            @media all and (max-width: 640px) {
+                   header {
+                    /* Return them to document order */
+                        order: 0;
+                    }
+       
+                    footer {
+                        min-height: 50px;
+                        max-height: 50px;
+                    }
+            }
+                .wrapper {
+                  margin: 0 auto;
+                  width: 90%;
+                }
+          
+                .cards {
+                  list-style: none;
+                  margin: 0;
+                  padding: 0;
+                }
+          
+                .cards li {
+                  border: 2px solid #490A3D;
+                  border-radius:5px;
+                  background-color: #BD1550;
+                  color: #fff;
+                  flex: 1 1 200px;
+                }
+          
+                .cards h2 {
+                  background-color: #490A3D;
+                  margin: 0;
+                  padding: 10px;
+                }
+                .cards p {
+                  padding: 10px;
+                }
+                .cards img {
+                  padding: 10px;
+                  max-width: 100%;
+                }
+                .grid-container div{
+                    color:#fff;
+                    font-size: 2em;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .grid-container li:nth-child(1n){
+                    background-color: #31DB33;
+                }
+                .grid-container li:nth-child(3n){
+                    background-color: #7798AB;
+                }
+                .grid-container li:nth-child(2n){
+                    background-color: #FF8966;
+                }
+                .grid-container{
+                    display:grid;
+                    grid-gap: 5px; 
+                    grid-template: repeat(2,1fr) / repeat(3, minmax(200px,1fr));
+                }
+
+
+    /*
+        You can use auto as well as fr on rows but it will work based on the height of parent element.
+    */
+
+    .container{
+        height: 100%;
+        display:grid;    
+        grid-template-columns: repeat(12,1fr);
+        grid-template-rows: 60px auto 140px; 
+        grid-gap: 5px;
+        /*
+            grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+                Naming your layout based on the available columns & rows. Similar letters should form a rectangle to work. Use '.' for blank cells.
+        */
+        grid-template-areas:
+            "h h h h h h h h h h h h"
+            "m m c c c c c c c c c c"
+            "f f f f f f f f f f f f"
+    }
+    .header{
+        /* Use the name defined in template-area to define element's area. It will take up that much rows & columns.  */
+        grid-area: h;
+    }
+    .menu{
+        grid-area: m;
+    }
+    .content{
+        grid-area: c;
+    }
+    .footer{
+        grid-area: f;
+    }
+
+    .container div{
+        color:#fff;
+        font-size: 2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .container div:nth-child(1n){
+        background-color: #C1DBB3;
+    }
+    .container div:nth-child(3n){
+        background-color: #7798AB;
+    }
+    .container div:nth-child(2n){
+        background-color: #FF8966;
+    }
+    .container div:nth-child(4n){
+        background-color: #ffcc5c;
+    }
+
+          
+        </style>
+          
+    </head>
+    <body>
+        <header>
+                    <nav>
+                        <ul class="nav-menu drop-down">
+                            <li class="nav-item"><a href="index.html">Home</a></li>
+                            <li class="nav-item"><a href="about.html">About</a></li>
+                            <li class="nav-item"><a href="products.html">Catalog</a></li>
+                            <li class="nav-item"><a href="blog.html">Blog</a></li>
+                            <li class="nav-item"><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+        </header>
+        <div class="container">
+                <div class="header">HEADER</div>
+                <div class="menu">MENU</div>
+                <div class="content">CONTENT</div>
+                <div class="footer">FOOTER</div>
+        </div>
+      <!-- Footer -->
+      <!-- start section footer -->
+      <footer id="footer" class="footer text-center">
+        <span class="text-muted">&copy; Copyrights Red Cats. All rights reserved.</span>
+      </footer>
+      <!-- End section footer -->
+    </body>
+</html>
